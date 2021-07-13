@@ -7,9 +7,15 @@ Using the Javascript framework of your choice, build an application that has two
 - `/search` lets the user search the Hacker News Algolia API and displays a list of results. [Hacker News API](https://hn.algolia.com/api)
 - `/history` shows the users a list of their past searches from this session (these do not need to persist through refresh).
 
+We're looking to see what you know in Javascript, querying an API, and state management. We're interested in whether you can write clean code and have the ability to learn/understand new technologies. We don't care about design/UI (for this project).
+
 ## Notes
 
-- I initiated components in PascalCase instead of kebab-case in a single bracket. Vue docs say to use kebab-case. But my IDE highlights them gold when used the way I did and it makes it stand out to me. This is a stylistic choice and I would follow whatever standard set by the team.
+- This is my first assignment like this that results in a review. Thank you for your time! I'm excited to see how I'm doing currently and how I can improve.
+- Nuxt and Vuex are overkill here. But they are currently my favorite tools so I wanted to show that and demonstrate use of store state management.
+- I kept comments minimal. On larger projects I usually leave a good portion of details when necessary. Currently I'd say I'm 50/50 split on leaving a highly detailed map and trying to write clean enough code that comments aren't necessary.
+- I fought the urge to work on the UI and add more functionality. But if you would like me to expand on something please don't hesitate to let me know!
+- I initiated components in PascalCase in a single bracket instead of kebab-case in a double bracket. Vue docs say to use kebab-case but my IDE highlights them gold when in pascal and it stands out as a component much more to me. This is just my preference but I'm happy adhering to all team styling decisions.
 
 ## Default Nuxt README
 

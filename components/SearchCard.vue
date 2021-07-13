@@ -17,7 +17,7 @@
         </span>
       </v-row>
       <div class="mt-4 text-subtitle-1">
-        Posted by <b>{{ result.author }}</b> on {{ parsedDate }}
+        Posted by <b>{{ result.author }}</b> on <b>{{ parsedDate }}</b>
       </div>
     </v-card-text>
   </v-card>

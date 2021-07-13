@@ -3,7 +3,11 @@
     <v-app-bar app color="info">
       <v-toolbar-title v-text="title" />
       <v-spacer></v-spacer>
-      <v-btn icon>
+      <v-btn
+        icon
+        href="https://github.com/styrofomeBoots/hn-search"
+        target="_blank"
+      >
         <v-icon>mdi-github</v-icon>
       </v-btn>
     </v-app-bar>
@@ -30,6 +34,7 @@ export default {
   },
 }
 </script>
+
 <style scoped>
 v-main {
   height: 200px;

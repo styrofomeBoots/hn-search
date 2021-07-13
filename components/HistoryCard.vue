@@ -4,6 +4,10 @@
       <a class="text-truncate" @click="searchAgain(search.phrase)">
         {{ search.phrase }}
       </a>
+      <v-spacer></v-spacer>
+      <v-btn icon @click="deleteSearch(search.key)"
+        ><v-icon>mdi-close</v-icon></v-btn
+      >
     </v-card-title>
     <v-card-text>
       <v-row align="center" class="mx-0">
@@ -25,7 +29,8 @@ import { mapActions } from 'vuex'
 export default {
   props: ['search'],
   methods: {
-    ...mapActions(['fetchSearchResults']),
+    ...mapActions(['fetchSearchResults', 'deleteSearch']),
+    // click on phrase and search it again
     searchAgain(queryString) {
       this.fetchSearchResults(queryString)
       this.$router.push('/search')

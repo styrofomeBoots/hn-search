@@ -21,7 +21,7 @@
       :key="result.created_at_i"
       class="mx-6"
     >
-      <search-card :result="result"></search-card>
+      <SearchCard :result="result" />
     </v-row>
   </v-container>
 </template>
