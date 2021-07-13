@@ -9,19 +9,19 @@
           single-line
           clearable
           v-model="searchString"
-          @keyup.enter="fetchSearchResults(searchString, true)"
+          @keyup.enter="fetchSearchResults(searchString)"
         ></v-text-field>
-        <v-btn @click="fetchSearchResults(searchString, true)" icon>
+        <v-btn @click="getSearch(searchString)" icon>
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
       </v-toolbar>
     </v-row>
     <v-row
-      v-for="result in allSearchResults"
+      v-for="result in getSearchResults"
       :key="result.created_at_i"
       class="mx-6"
     >
-      <SearchCard :result="result" />
+      <search-card :result="result"></search-card>
     </v-row>
   </v-container>
 </template>
@@ -40,7 +40,9 @@ export default {
       searchString: '',
     }
   },
-  computed: mapGetters(['allSearchResults']),
+  computed: {
+    ...mapGetters(['getSearchResults', 'getSearchString']),
+  },
   methods: {
     ...mapActions(['fetchSearchResults']),
   },
@@ -49,7 +51,6 @@ export default {
 
 <style scoped>
 .no-search-results {
-  height: 200px;
-  max-height: 200px;
+  height: 300px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <v-card class="my-2 search-card">
     <v-card-title>
-      <a :href="result.url" target="_blank">
+      <a :href="result.url" target="_blank" class="text-truncate">
         {{ result.title }}
       </a>
     </v-card-title>
@@ -17,7 +17,7 @@
         </span>
       </v-row>
       <div class="mt-4 text-subtitle-1">
-        Posted by <b>{{ result.author }}</b> on <b>{{ parsedDate }}</b>
+        Posted by <b>{{ result.author }}</b> on {{ parsedDate }}
       </div>
     </v-card-text>
   </v-card>
@@ -26,11 +26,8 @@
 <script>
 export default {
   props: ['result'],
-  data() {
-    return {}
-  },
   computed: {
-    parsedDate: function () {
+    parsedDate() {
       return this.result.created_at.split('T')[0]
     },
   },

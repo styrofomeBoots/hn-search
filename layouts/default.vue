@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-app-bar app>
+    <v-app-bar app color="info">
       <v-toolbar-title v-text="title" />
       <v-spacer></v-spacer>
       <v-btn icon>
@@ -31,6 +31,11 @@ export default {
 }
 </script>
 <style scoped>
+v-main {
+  height: 200px;
+  max-height: 200px;
+}
+
 .main-container {
   width: 55%;
 }

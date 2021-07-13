@@ -9,6 +9,8 @@ Using the Javascript framework of your choice, build an application that has two
 
 ## Notes
 
+- I initiated components in PascalCase instead of kebab-case in a single bracket. Vue docs say to use kebab-case. But my IDE highlights them gold when used the way I did and it makes it stand out to me. This is a stylistic choice and I would follow whatever standard set by the team.
+
 ## Default Nuxt README
 
 ### Build Setup
