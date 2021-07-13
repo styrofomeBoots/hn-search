@@ -13,11 +13,12 @@ const getters = {
 }
 
 const actions = {
-  async fetchSearchResults({ commit }, queryString) {
+  async fetchSearchResults({ commit }, queryString, firstSearch) {
     let encodedQueryString = queryString.replaceAll(' ', '%20')
     let urlString = baseUrl + encodedQueryString
     const response = await axios.get(urlString)
     commit('setSearchResults', response.data.hits)
+    if (firstSearch) this.updateSearchHistory(queryString)
   },
 
   updateSearchHistory({ commit }, queryString) {

@@ -10,8 +10,9 @@
 
     <v-main>
       <div class="d-flex justify-center mt-4">
-        <v-btn text large rounded>SEARCH</v-btn>
-        <v-btn text large rounded>HISTORY</v-btn>
+        <v-btn text large rounded to="/search">SEARCH</v-btn>
+        <span class="text-h4 mx-2">|</span>
+        <v-btn text large rounded to="/history">HISTORY</v-btn>
       </div>
       <v-container class="main-container">
         <Nuxt />

@@ -1,6 +1,5 @@
 <template>
   <v-container>
-    <!-- <v-row class="no-results" v-if="searchResults.length == 0"></v-row> -->
     <v-row>
       <v-toolbar dense class="rounded-lg">
         <v-text-field
@@ -8,19 +7,28 @@
           hide-details
           prepend-icon="mdi-magnify"
           single-line
+          clearable
           v-model="searchString"
+          @keyup.enter="fetchSearchResults(searchString, true)"
         ></v-text-field>
+        <v-btn @click="fetchSearchResults(searchString, true)" icon>
+          <v-icon>mdi-chevron-right</v-icon>
+        </v-btn>
       </v-toolbar>
     </v-row>
-    <v-row>
-      <SearchCard />
+    <v-row
+      v-for="result in allSearchResults"
+      :key="result.created_at_i"
+      class="mx-6"
+    >
+      <SearchCard :result="result" />
     </v-row>
   </v-container>
 </template>
 
 <script>
 import SearchCard from '../components/SearchCard'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -30,16 +38,11 @@ export default {
     return {
       searchInputLabel: 'Start Your Search...',
       searchString: '',
-      searchResults: [],
     }
   },
   computed: mapGetters(['allSearchResults']),
   methods: {
-    queryAPI: () => {
-      let encodedQuery = this.searchString.replaceAll(' ', '%20')
-      let queryUrl = `${this.baseURL}query=${encodedQuery}`
-      axios.get(queryUrl).then((data) => console.log(data))
-    },
+    ...mapActions(['fetchSearchResults']),
   },
 }
 </script>
