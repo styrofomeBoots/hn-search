@@ -11,11 +11,12 @@ We're looking to see what you know in Javascript, querying an API, and state man
 
 ## Notes
 
-- This is my first assignment like this that results in a review. Thank you for your time! I'm excited to see how I'm doing currently and how I can improve.
-- Nuxt and Vuex are overkill here. But they are currently my favorite tools so I wanted to show that and demonstrate use of store state management.
-- I kept comments minimal. On larger projects I usually leave a good portion of details when necessary. Currently I'd say I'm 50/50 split on leaving a highly detailed map and trying to write clean enough code that comments aren't necessary.
+- This is my first assignment like this that results in a review. Thank you for your time! I'm excited to see where I stand and how I can improve.
+- Nuxt and Vuex are overkill here. But they are currently my favorite tools so I wanted to show that and demonstrate use of stored state management.
+- I kept comments minimal. On larger projects I usually leave a good portion of details when necessary. Currently I'd say I'm 50/50 split betwween leaving a highly detailed map and trying to write clean enough code that comments aren't necessary.
 - I fought the urge to work on the UI and add more functionality. But if you would like me to expand on something please don't hesitate to let me know!
-- I initiated components in PascalCase in a single bracket instead of kebab-case in a double bracket. Vue docs say to use kebab-case but my IDE highlights them gold when in pascal and it stands out as a component much more to me. This is just my preference but I'm happy adhering to all team styling decisions.
+- I initiated components in PascalCase in a single bracket instead of kebab-case in a double bracket. Vue docs say to use kebab-case but my IDE highlights them gold when in pascal and it stands out more as a component.
+- As the only developer at my current company I make all code style decisions. But I have no strong opinions and I am able to adapt to team guidelines.
 
 ## Default Nuxt README
 
